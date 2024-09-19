@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
+import "./globals.scss";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+const interTightItalic = localFont({
+  src: "./fonts/InterTight-Italic.ttf",
+  variable: "--font-intertight-italic",
   weight: "100 900",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+
+const interTight = localFont({
+  src: "./fonts/InterTight.ttf",
+  variable: "--font-intertight",
   weight: "100 900",
 });
 
@@ -24,8 +25,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="pt-br">
+      <body className={`${interTightItalic.variable} ${interTight.variable}`}>
         {children}
       </body>
     </html>
