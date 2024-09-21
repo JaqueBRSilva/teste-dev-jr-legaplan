@@ -1,0 +1,35 @@
+:root {
+  --black: #000;
+  --white: #FFF;
+  --ice: #EAECF0;
+
+  --hover: #F7F9FD;
+
+  --gray: #757575;
+  --light-gray: #D7DDE9;
+
+  --blue: #0796D3;
+  --light-blue: #53C0F0;
+
+  --red: #D30707;
+  --light-red: #F05353;
+
+
+  background: var(--white);
+}
+
+* {
+  font-family: var(--font-intertight), Helvetica, sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+hr {
+  color: var(--grey);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
