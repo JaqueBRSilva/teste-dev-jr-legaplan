@@ -1,0 +1,30 @@
+.container {
+    display: grid;
+
+    @media (min-width: 576px) {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.tasksArea {
+    margin-top: 2rem;
+    padding: 0 2rem;
+    border-width: 1px;
+    border: 1px solid var(--ice);
+    border-radius: 16px;
+
+    @media (min-width: 576px) {
+        margin: 2.5rem 0;
+        width: 450px;
+        max-width: 40rem;
+    }
+}
+
+.taskSectionTitle {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--gray);
+}
