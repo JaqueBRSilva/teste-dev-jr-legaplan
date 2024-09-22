@@ -26,7 +26,7 @@ export const TaskList: React.FC<ITask_Props> = ({ ...tasksProps }) => {
     }
 
     const handleOpenDeleteQuestion = (taskID: number) => {
-        return router.push(`/delete-task`)
+        return router.push(`/delete-task/${taskID}`)
     }
 
     const handleChangeTaskStatus = (itemChecked: number) => {
