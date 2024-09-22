@@ -89,7 +89,7 @@ export const TaskList: React.FC<ITask_Props> = ({ ...tasksProps }) => {
                                 className={styles.checkboxChecked}
                             />
 
-                            <p className={styles.taskDescription}>
+                            <p className={styles.taskDescriptionCompleted}>
                                 {listItem.taskDescription}
                             </p>
 

@@ -10,13 +10,11 @@
     gap: 0.8rem;
     margin-bottom: 0.8rem;
 
-
     &:hover {
         background: var(--hover);
         border: 1px solid var(--hover);
         cursor: pointer;
     }
-
 
     @media (min-width: 576px) {
         margin-bottom: 1rem;
@@ -35,8 +33,17 @@
 
 .taskDescription {
     font-size: 1.2rem;
+    color: var(--black);
     font-weight: 500;
     text-align: left;
+}
+
+.taskDescriptionCompleted {
+    font-size: 1.2rem;
+    color: var(--gray);
+    font-weight: 400;
+    text-align: left;
+    text-decoration: line-through;
 }
 
 .trashButton {
