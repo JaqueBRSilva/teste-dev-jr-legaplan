@@ -2,6 +2,7 @@
 
 import { ITask_Props, Task_PropTypes } from '@/app/types/TasksProps'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import CHECKBOX_UNCHECKED from '../../assets/Checkbox.png'
 import CHECKBOX_CHECKED from '../../assets/Checked.png'
@@ -9,6 +10,8 @@ import Trash from '../../assets/trash.png'
 import styles from './TaskList.module.scss'
 
 export const TaskList: React.FC<ITask_Props> = ({ ...tasksProps }) => {
+    const router = useRouter()
+
     const [toDoList, setToDoList] = useState<Task_PropTypes[]>()
     const [completedList, setCompletedList] = useState<Task_PropTypes[]>()
     const [isTaskChecked, setIsTaskChecked] = useState<boolean>(false)
@@ -22,9 +25,8 @@ export const TaskList: React.FC<ITask_Props> = ({ ...tasksProps }) => {
         setCompletedList(JSON.parse(loadDoneTasks))
     }
 
-    const handleDeleteItem = (taskID: number) => {
-        let deleteTasks = toDoList?.filter((task) => task.id != taskID)
-        return setToDoList(deleteTasks)
+    const handleOpenDeleteQuestion = (taskID: number) => {
+        return router.push(`/delete-task`)
     }
 
     const handleChangeTaskStatus = (itemChecked: number) => {
@@ -42,7 +44,7 @@ export const TaskList: React.FC<ITask_Props> = ({ ...tasksProps }) => {
 
                     toDoList?.map((listItem: Task_PropTypes, index) => (
 
-                        <button
+                        <button type='button'
                             key={listItem.id}
                             className={styles.itemListButton}
                             value={listItem.id}
@@ -59,15 +61,15 @@ export const TaskList: React.FC<ITask_Props> = ({ ...tasksProps }) => {
                                 {listItem.taskDescription}
                             </p>
 
-                            <button className={styles.trashButton}
-                                onClick={() => handleDeleteItem(listItem.id)}
+                            <div className={styles.trashButton}
+                                onClick={() => handleOpenDeleteQuestion(listItem.id)}
                             >
                                 <Image
                                     className={styles.trashImg}
                                     alt="trash icon"
                                     src={Trash}
                                 />
-                            </button>
+                            </div>
 
                         </button>
                     ))
@@ -76,7 +78,7 @@ export const TaskList: React.FC<ITask_Props> = ({ ...tasksProps }) => {
 
                     completedList?.map((listItem: Task_PropTypes) => (
 
-                        <button
+                        <button type='button'
                             key={listItem.id}
                             className={styles.itemListButton}
                             value={listItem.id}
@@ -93,15 +95,15 @@ export const TaskList: React.FC<ITask_Props> = ({ ...tasksProps }) => {
                                 {listItem.taskDescription}
                             </p>
 
-                            <button className={styles.trashButton}
-                                onClick={() => handleDeleteItem(listItem.id)}
+                            <div className={styles.trashButton}
+                                onClick={() => handleOpenDeleteQuestion(listItem.id)}
                             >
                                 <Image
                                     className={styles.trashImg}
                                     alt="trash icon"
                                     src={Trash}
                                 />
-                            </button>
+                            </div>
 
                         </button>
                     ))
