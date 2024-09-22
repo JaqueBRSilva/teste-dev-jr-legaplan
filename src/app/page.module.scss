@@ -1,3 +1,30 @@
 .page {
     padding: 2rem;
 }
+
+.backgroundLayerForModal {
+
+    @media (min-width: 576px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(35%);
+        -webkit-backdrop-filter: blur(35%);
+    }
+}
+
+.modalMode {
+    padding: 2rem;
+
+    @media (min-width: 576px) {
+        width: 30rem;
+        height: 19rem;
+        border-radius: 1rem;
+        background: var(--white);
+
+        box-shadow: 0px 24px 48px -12px #1018282E;
+    }
+}
