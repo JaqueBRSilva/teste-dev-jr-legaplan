@@ -9,10 +9,11 @@
 
 .tasksArea {
     margin-top: 2rem;
-    padding: 0 2rem;
+    padding: 0 2rem 1rem 2rem;
     border-width: 1px;
     border: 1px solid var(--ice);
     border-radius: 16px;
+    box-shadow: 0px 1px 2px 0px #1018280D;
 
     @media (min-width: 576px) {
         margin: 2.5rem 0;
