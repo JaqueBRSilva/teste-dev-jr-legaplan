@@ -1,0 +1,35 @@
+.labelText {
+    display: grid;
+    margin-bottom: 0.3rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.inputTxt {
+    height: 4rem;
+    width: 100%;
+    padding: 1rem;
+    color: var(--black);
+    font-size: 1.1rem;
+    font-weight: 400;
+    background: transparent;
+    border-radius: 8px;
+    border: 1px solid var(--light-gray);
+
+    &::placeholder {
+        color: var(--gray);
+        font-size: 1.1rem;
+        font-weight: 400;
+    }
+}
+
+.groupButtonsContainer {
+
+    @media (min-width: 576px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        gap: 1rem;
+    }
+}
