@@ -62,7 +62,7 @@ export const Tasks = () => {
 
             <AddNewTaskButton
                 text='Adicionar nova tarefa'
-                onAddNewTask={() => handleNavigateForNewTaskPage()}
+                onClickResponse={() => handleNavigateForNewTaskPage()}
             />
 
         </div>
