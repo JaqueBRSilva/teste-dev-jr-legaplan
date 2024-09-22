@@ -2,7 +2,12 @@
     margin: 1.5rem 0;
     width: 100%;
 
-    @media (min-width: 576px){
+    &:hover {
+        opacity: 0.8;
+        transition: 0.7seg;
+    }
+
+    @media (min-width: 576px) {
         margin: 2rem 0;
     }
 }
